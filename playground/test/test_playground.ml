@@ -1,7 +1,7 @@
 open Playground
 
 let rec loop f c = function
-  | 0 -> ()
+  | n  when n < 0 -> ()
   | n ->
     write_file (c ^ (string_of_int n)) f;
     let c' = read_file f in
